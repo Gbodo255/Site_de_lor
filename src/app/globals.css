@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #090D16;
+    --foreground: #f8fafc;
+  }
+
+  body {
+    background-color: #090D16;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: 'Cormorant Garamond', 'DM Serif Display', Georgia, serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Utilities for Luxury UI */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #b8a468 0%, #a98c35 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #e4d39c 0%, #b8a468 50%, #8f7729 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold {
+  border-color: #b8a468;
+}
+
+.text-gold-light {
+  color: #b8a468;
+}
+
+.text-gold-dark {
+  color: #a98c35;
+}
+
+.bg-grey-900 {
+  background-color: #090D16;
+}
+
+.bg-grey-800 {
+  background-color: #121826;
+}
+
+.bg-grey-700 {
+  background-color: #1E293B;
+}
+
+.text-grey-dark {
+  color: #94A3B8;
+}
+
+.text-grey-300 {
+  color: #CBD5E1;
+}
+
+.text-grey-100 {
+  color: #F1F5F9;
+}
+
+.bg-red-light {
+  background-color: #9d1a19;
+}
+
+.bg-red-dark {
+  background-color: #711513;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090D16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8a468;
 }
